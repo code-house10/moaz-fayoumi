@@ -1,0 +1,561 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>شركة المعز لنقل العفش 01093800136</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cairo:700,400,900&subset=arabic,latin-ext&display=swap" rel="stylesheet">
+<link href="css/elnesr.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="util.min.js"></script>
+<script src="carousel.min.js"></script>
+<script src="jquery.ui.effect.min.js"></script>
+<script src="wb.panel.min.js"></script>
+<script src="wwb17.min.js"></script>
+<script>   
+   $(document).ready(function()
+   {
+      $('#wb_attractionsCarousel').addClass('visibility-hidden');
+      $('#wb_Card12').addClass('visibility-hidden');
+      $('#wb_Card13').addClass('visibility-hidden');
+      $('#wb_Card14').addClass('visibility-hidden');
+      $('#wb_service1').addClass('visibility-hidden');
+      $('#wb_service2').addClass('visibility-hidden');
+      $('#wb_service3').addClass('visibility-hidden');
+      $("#Carousel2").bootstrapcarousel({interval:1250, pause: false});
+      function onScrollCarousel2DividerTop()
+      {
+         var $obj = $('#Carousel2-divider-top');
+         if (!$obj.hasClass('show') && $obj.inViewPort(false))
+         {
+            $obj.addClass('show');
+         }
+      }
+      onScrollCarousel2DividerTop();
+      $(window).scroll(function(event)
+      {
+         onScrollCarousel2DividerTop();
+      });
+      $("a[href*='#services']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_services').offset().top-80 }, 600, 'linear');
+      });
+      $("a[href*='#planTripLayoutGrid']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#planTripLayoutGrid').offset().top }, 600, 'easeInSine');
+      });
+      $("a[href*='#contactForm']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_contactForm').offset().top }, 600, 'easeInSine');
+      });
+      $("#attractionsCarousel").on('slid.bs.carousel', function(e)
+      {
+         var index = $(e.relatedTarget).index();
+         switch(index)
+         {
+            case 0:
+               $('#Carousel2').bootstrapcarousel(0);
+               break;
+         }
+      });
+      $("#attractionsCarousel").bootstrapcarousel({interval:0, pause: false});
+      function onScrollattractionsCarousel()
+      {
+         var $obj = $("#wb_attractionsCarousel");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('wb_attractionsCarousel', 'transform-scale-in', 0, 1250);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('wb_attractionsCarousel', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_attractionsCarousel').inViewPort(true))
+      {
+         $('#wb_attractionsCarousel').addClass("in-viewport");
+      }
+      onScrollattractionsCarousel();
+      $(window).scroll(function(event)
+      {
+         onScrollattractionsCarousel();
+      });
+      function onScrollCard12()
+      {
+         var $obj = $("#wb_Card12");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('wb_Card12', 'transform-pulse', 0, 1250);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('wb_Card12', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_Card12').inViewPort(true))
+      {
+         $('#wb_Card12').addClass("in-viewport");
+      }
+      onScrollCard12();
+      $(window).scroll(function(event)
+      {
+         onScrollCard12();
+      });
+      function onScrollCard13()
+      {
+         var $obj = $("#wb_Card13");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('wb_Card13', 'transform-pulse', 0, 1250);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('wb_Card13', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_Card13').inViewPort(true))
+      {
+         $('#wb_Card13').addClass("in-viewport");
+      }
+      onScrollCard13();
+      $(window).scroll(function(event)
+      {
+         onScrollCard13();
+      });
+      function onScrollCard14()
+      {
+         var $obj = $("#wb_Card14");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('wb_Card14', 'transform-pulse', 0, 1250);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('wb_Card14', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_Card14').inViewPort(true))
+      {
+         $('#wb_Card14').addClass("in-viewport");
+      }
+      onScrollCard14();
+      $(window).scroll(function(event)
+      {
+         onScrollCard14();
+      });
+      function onScrollservice1()
+      {
+         var $obj = $("#wb_service1");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('wb_service1', 'transform-scale-in', 100, 2000);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('wb_service1', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_service1').inViewPort(true))
+      {
+         $('#wb_service1').addClass("in-viewport");
+      }
+      onScrollservice1();
+      $(window).scroll(function(event)
+      {
+         onScrollservice1();
+      });
+      function onScrollservice2()
+      {
+         var $obj = $("#wb_service2");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('wb_service2', 'transform-scale-in', 100, 2000);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('wb_service2', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_service2').inViewPort(true))
+      {
+         $('#wb_service2').addClass("in-viewport");
+      }
+      onScrollservice2();
+      $(window).scroll(function(event)
+      {
+         onScrollservice2();
+      });
+      function onScrollservice3()
+      {
+         var $obj = $("#wb_service3");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('wb_service3', 'transform-scale-in', 100, 2000);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('wb_service3', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_service3').inViewPort(true))
+      {
+         $('#wb_service3').addClass("in-viewport");
+      }
+      onScrollservice3();
+      $(window).scroll(function(event)
+      {
+         onScrollservice3();
+      });
+      $("#headerPanelMenu").panel({animate: true, animationDuration: 200, animationEasing: 'linear', dismissible: true, display: 'overlay', position: 'left', toggle: true});
+      $("#headerPanelMenu_markup ul li a").click(function(event)
+      {
+          $.panel.hide($("#headerPanelMenu_panel"));
+      });
+   });
+</script>
+</head>
+<body>
+   <div id="wb_header">
+      <div id="header">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_headerPanelMenu">
+                  <a href="#headerPanelMenu_markup" id="headerPanelMenu">
+                     <span class="line"></span>
+                     <span class="line"></span>
+                     <span class="line"></span>
+                  </a>
+                  <div id="headerPanelMenu_markup">
+                     <ul role="menu">
+                        <li role="menuitem"><a href="#contact" class="nav-link">&#1604;&#1604;&#1578;&#1608;&#1575;&#1589;&#1604;</a></li>
+                        <li role="menuitem"><a href="#planTrip" class="nav-link">&#1593;&#1606; &#1575;&#1604;&#1588;&#1585;&#1603;&#1577;</a></li>
+                        <li role="menuitem"><a href="#services" class="nav-link">&#1582;&#1583;&#1605;&#1575;&#1578;&#1606;&#1575;</a></li>
+                        <li role="menuitem"><a href="#header" class="nav-link">&#1575;&#1604;&#1585;&#1574;&#1610;&#1587;&#1610;&#1577;</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div id="wb_headerBreadcrumb">
+                  <ul id="headerBreadcrumb">
+                     <li><a href="#contact">.</a></li>
+                     <li><a href="#contact">&#1604;&#1604;&#1578;&#1608;&#1575;&#1589;&#1604;</a></li>
+                     <li><a href="#planTripLayoutGrid">&#1593;&#1606; &#1575;&#1604;&#1588;&#1585;&#1603;&#1577;</a></li>
+                     <li><a href="#services">&#1582;&#1583;&#1605;&#1575;&#1578;&#1606;&#1575;</a></li>
+                     <li><a href="#header">&#1575;&#1604;&#1585;&#1574;&#1610;&#1587;&#1610;&#1577;</a></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-3">
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_LayoutGrid2">
+      <div id="LayoutGrid2-divider-bottom">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+            <path class="divider-fill" d="M421.9,6.5c22.6-2.5,51.5,0.4,75.5,5.3c23.6,4.9,70.9,23.5,100.5,35.7c75.8,32.2,133.7,44.5,192.6,49.7c23.6,2.1,48.7,3.5,103.4-2.5c54.7-6,106.2-25.6,106.2-25.6V0H0v30.3c0,0,72,32.6,158.4,30.5c39.2-0.7,92.8-6.7,134-22.4c21.2-8.1,52.2-18.2,79.7-24.2C399.3,7.9,411.6,7.5,421.9,6.5z">
+            </path>
+         </svg></div>
+      <div id="LayoutGrid2">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Text1">
+                  <span style="color:#000000;font-family:Cairo;font-size:19px;"><strong>شركة </strong></span><span style="color:#000000;font-family:Cairo;font-size:19px;"><strong>المعز </strong></span><span style="color:#000000;font-family:Cairo;font-size:19px;"><strong>لنقل الأثاث والعفش</strong></span>
+               </div>
+               <div id="wb_Text2">
+                  <span style="color:#FFFFFF;font-family:Cairo;font-size:16px;">إتصل على </span><span style="color:#FFFFFF;font-family:Cairo;font-size:20px;"><strong>  01093800136 - 01096163870 </strong></span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_Carousel2">
+      <div id="Carousel2" class="carousel slide" data-ride="carousel">
+         <ol class="carousel-indicators">
+            <li data-target="#Carousel2" data-slide-to="0" class="active"></li>
+            <li data-target="#Carousel2" data-slide-to="1"></li>
+            <li data-target="#Carousel2" data-slide-to="2"></li>
+         </ol>
+         <div class="carousel-inner">
+            <div class="carousel-item frame-1 active">
+               <div class="carousel-innerframe">
+               </div>
+            </div>
+            <div class="carousel-item frame-2">
+               <div class="carousel-innerframe">
+               </div>
+            </div>
+            <div class="carousel-item frame-3">
+               <div class="carousel-innerframe">
+               </div>
+            </div>
+         </div>
+         <a class="carousel-item-left carousel-control" href="#Carousel2" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span>
+         </a>
+         <a class="carousel-item-right carousel-control" href="#Carousel2" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span>
+         </a>
+      </div>
+      <div id="Carousel2-divider-top">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 458.89" preserveAspectRatio="none">
+            <path class="divider-fill" style="opacity:0.3" d="M394.87 433.4C488.07 402 572.38 322.71 656.53 241c-73.83 19-145.79 48.57-216.67 77.31-98.09 39.78-199.68 78.93-304.4 86.55 84.78 42.95 173.24 57.58 259.41 28.54zM656.53 241c45.78-11.75 92.27-19.4 139.69-20.19 70.57-1.16 138.4 12.7 203.78 36.37V0c-59.88 17.86-118.67 47.58-174.92 89.39C767.3 132.33 712 187.19 656.53 241zM135.46 404.86C88.86 381.25 43.38 349.08 0 310.9v82.75a378.35 378.35 0 0 0 81.63 12.23 485.13 485.13 0 0 0 53.83-1.02z"/>
+            <path class="divider-fill" d="M1000 458.89V257.18c-65.38-23.67-133.21-37.53-203.78-36.37-47.42.79-93.91 8.44-139.69 20.19-84.15 81.71-168.46 161-261.66 192.4-86.17 29-174.63 14.41-259.41-28.54a485.13 485.13 0 0 1-53.83 1A378.35 378.35 0 0 1 0 393.65v65.24z"/>
+         </svg></div>
+   </div>
+   <div id="wb_LayoutGrid1">
+      <div id="LayoutGrid1">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Text4">
+                  <span style="color:#000000;font-family:Cairo;font-size:16px;line-height:30px;">شركة المعز بتقدملك كل الخدمات اللي تحتاجها من أول العربيات 6 متر مغلقة ومؤمنة بالكامل للحفاظ علي الاثاث إلي التغليف والتركيب والنجارين والفنيين الكهربائيين و العمال و أوناش رفع العفش إتصل بينا ومتشلش هم النقل&nbsp; 01093800136 - 01096163870 .<br><br>شركة المعز بتقدملك كل الخدمات الي هتحتاجها وانت بتنقل أثاث منزلك بأقل تكاليف وأفضل خدمة<br><br>نجارين متخصصون في الفك والتركيب👍<br>تغليف الأثاث ومشتملات المطبخ والصيني بأحدث الطرق وأفضل الخامات👍<br>فنيون لفك وتركيب النجف والستاير والاجهزة والتكييفات👍<br>اوناش هيدروليك👍<br>سيارات مخصصه لنقل الأثاث لجميع المحافظات👍<br>عمالة وإشراف عالي الجودة👍<br>اقل تكاليف وأفضل خدمة👍</span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_CardContainer5">
+      <div id="CardContainer5-overlay"></div>
+      <div id="CardContainer5">
+         <div id="wb_Card12" class="card">
+            <div id="Card12-card-body">
+               <div id="Card12-card-item0"><i class="fa fa-users"></i></div>
+               <div id="Card12-card-item1">عمالة مهنية مخصصة لنقل العفش</div>
+               <hr id="Card12-card-item2">
+            </div>
+         </div>
+         <div id="wb_Card13" class="card">
+            <div id="Card13-card-body">
+               <div id="Card13-card-item0"><i class="fa fa-truck"></i></div>
+               <div id="Card13-card-item1">سيارات نقل مغلقة للحفاظ على العفش</div>
+               <hr id="Card13-card-item2">
+            </div>
+         </div>
+         <div id="wb_Card14" class="card">
+            <div id="Card14-card-body">
+               <div id="Card14-card-item0"><i class="fa fa-suitcase"></i></div>
+               <div id="Card14-card-item1">تغليف شامل للعفش للحفاظ عليه </div>
+               <hr id="Card14-card-item2">
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_planTrip">
+      <div id="planTrip">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Card8" class="card">
+                  <div id="Card8-card-body">
+                     <div id="Card8-card-item0">“</div>
+                     <div id="Card8-card-item1">خدمة 24 ساعة</div>
+                     <hr id="Card8-card-item2">
+                     <div id="Card8-card-item3">نعمل على مدار الاسبوع والأجازات الرسمية</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_services">
+      <div id="services-overlay"></div>
+      <div id="services">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_service1">
+                  <span style="color:#000000;font-family:Cairo;font-size:19px;line-height:36px;"><strong>فك وتركيب العفش</strong></span><span style="color:#000000;font-family:Cairo;font-size:13px;line-height:24px;"><br></span><span style="color:#FFFFFF;font-family:Cairo;font-size:13px;line-height:24px;"><br>بمجرد الانتقال الي البيت الجديد نقوم بتركيب قطع الأثاث الكبيرة, و ترتيبها , كذلك يتم فرز الكراتين و الحقائب و توزيعها علي الاماكن المخصصة لها .<br></span>
+               </div>
+            </div>
+            <div class="col-2">
+               <div id="wb_service2">
+                  <span style="color:#000000;font-family:Cairo;font-size:19px;line-height:36px;"><strong>النقل داخل وخارج المعز</strong></span><span style="color:#000000;font-family:Cairo;font-size:16px;line-height:36px;"><strong><br></strong></span><span style="color:#000000;font-family:Cairo;font-size:13px;line-height:24px;"><br></span><span style="color:#FFFFFF;font-family:Cairo;font-size:13px;line-height:24px;"> فشركة المعز من الشركات القليلة جدا المعتمدة في مصر و التي تقدم خدمات نقل الاثاث داخل و خارج المعز<br></span>
+               </div>
+            </div>
+            <div class="col-3">
+               <div id="wb_service3">
+                  <span style="color:#000000;font-family:Cairo;font-size:19px;line-height:36px;"><strong>ونش هيدروليكى للأدوار المرتفعة<br></strong></span><span style="color:#000000;font-family:Cairo;font-size:13px;line-height:24px;"><br></span><span style="color:#FFFFFF;font-family:Cairo;font-size:13px;line-height:24px;">نستخدم اوناش هيدروليكية مخصصة لرفع وتنزيل العفش من الأدوار العالية أو فى حالة السلالم الضيقة </span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_planTripLayoutGrid">
+      <div id="planTripLayoutGrid-divider-top">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path class="divider-fill" d="M50,99.286L0,0L0,100L100,100L100,0L50,99.286Z" style="fill-opacity:0.5;"/>
+            <path class="divider-fill" d="M50,99.286L0,30L0,100L100,100L100,30L50,99.286Z"/>
+         </svg></div>
+      <div id="planTripLayoutGrid">
+         <div id="wb_planTripCard3" class="card">
+            <div id="planTripCard3-card-body">
+               <div id="planTripCard3-card-item0"><i class="fa fa-money"></i></div>
+               <div id="planTripCard3-card-item1">نقل العفش بأقل سعر</div>
+               <div id="planTripCard3-card-item2">تتميز شركتنا بقدرتها على نقل العفش بأقل تكلفة وذلك لأعتمادنا على معدات الشركة المملوكة لها مما يخفض سعر التكلفة على العميل</div>
+            </div>
+         </div>
+         <div id="wb_planTripCard2" class="card">
+            <div id="planTripCard2-card-body">
+               <div id="planTripCard2-card-item0"><a href="./index.html"><i class="fa fa-users"></i></a></div>
+               <div id="planTripCard2-card-item1">عمالة مخصصة لنقل العفش بحرص شديد</div>
+               <div id="planTripCard2-card-item2">تعتمد شركتنا على العمالة المهنية والمخصصة للتعامل مع العفش ونقله بحرص وعناية كبيرة</div>
+            </div>
+         </div>
+         <div id="wb_planTripCard1" class="card">
+            <div id="planTripCard1-card-body">
+               <div id="planTripCard1-card-item0"><i class="fa fa-clock-o"></i></div>
+               <div id="planTripCard1-card-item1">التزام بالمواعيد مع العميل</div>
+               <div id="planTripCard1-card-item2">من اهم سمات شركتنا هو الالتزام  ودقة المواعيد مع العميل وذلك حرصا على وقت العميل</div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_attractions">
+      <div id="attractions">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_attractionsCarousel">
+                     <div id="attractionsCarousel" class="carousel slide">
+                        <ol class="carousel-indicators">
+                           <li data-target="#attractionsCarousel" data-slide-to="0" class="active"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                           <div class="carousel-item frame-1 active">
+                              <div class="carousel-innerframe">
+                              </div>
+                           </div>
+                        </div>
+                        <a class="carousel-item-left carousel-control" href="#attractionsCarousel" role="button" data-slide="prev">
+                           <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-item-right carousel-control" href="#attractionsCarousel" role="button" data-slide="next">
+                           <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="wb_attractionsText1">
+                     <span style="color:#000000;font-family:'Cairo';font-weight:900;font-size:16px;line-height:30px;">شركة المعز هي احدي أفضل الشركات الرائدة في مجال نقل العفش بجميع أنحاء الجمهورية , يمكنك معها نقل عفش منزلك , شركتك , مكتبك بأمان تام دون أن يحدث له أي ضرر او تلف .</span>
+                  </div>
+                  <a id="attractionsButton" href="tel:01093800136">اتصل اليوم وإحجز ميعاد</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_banner">
+      <div id="banner-overlay"></div>
+      <div id="banner">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_bannerHeading1">
+                  <h2 id="bannerHeading1">عمالة مخصصة للتعامل مع الأثاث بعناية </h2>
+               </div>
+               <div id="wb_bannerHeading2">
+                  <h3 id="bannerHeading2">نعمل على مدار الاسبوع والعطلات الرسمية </h3>
+               </div>
+               <a id="bannerButton" href="tel:01093800136">خدمة 24 ساعة</a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_contact">
+      <div id="contact-divider-bottom">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 125" preserveAspectRatio="none">
+            <path class="divider-fill" d="m 0,105.67464 c 0,0 30.428355,1.32968 48.428355,-23.994243 0,0 20.991645,7.99808 29.991645,-7.998081 0,0 1.33,4.328961 9.66,1.329681 0,0 2,21.634808 20,8.337999 0,0 10,34.991604 43,8.657922 0,0 5,1.353987 10,-4.314653 0,0 22.67,25.979455 39,-5.343029 0,0 21.28991,8.339283 31.61991,-0.328637 0,0 1.38009,23.653041 36.38009,23.653041 35,0 39.34,-14.996403 39.34,-14.996403 0,0 7.00501,35.001143 43.66501,13.006423 0,0 10.64662,6.98052 16.64662,5.32092 0,0 6.68837,15.99442 25.68837,15.99442 19,0 38.33,-10.99736 38.33,-37.321043 0,0 17,8.66792 27.33,-8.99784 0,0 9.34,11.297288 32,1.32968 0,0 1.67,8.997841 11.34,8.337999 0,0 -3.35002,24.009834 25.98998,20.680634 0,0 21.67002,22.96889 24.01002,-11.022952 0,0 4.66,0 9.33,-5.658641 0,0 2.33,16.656003 26,16.656003 23.67,0 29.33,-24.654084 22.33,-34.991603 0,0 14.67,7.388227 18,-3.99904 0,0 13.67,18.995441 33.67,10.307526 16.54,-7.16828 9.33,-26.993522 9.33,-26.993522 0,0 22.34,18.325602 44,-16.666 0,0 9.67,28.663121 46.67,28.663121 27.67,0 37.67,-21.650492 37.67,-21.650492 0,0 27,32.647853 42.33,-8.012389 0,0 3.67,8.997841 13.33,0.669839 0,0 -2.66,12.327042 6,10.657443 0,0 -8,14.336559 -8,28.993041 0,14.656483 27.32665,31.342016 53.32665,15.005939 0,0 31.84335,43.320067 93.59335,14.986867 V 0 H 0 Z"/>
+         </svg></div>
+      <div id="contact">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_contactHeading">
+                  <h2 id="contactHeading">تواصل معنا فى أى وقت</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_contactForm">
+      <div id="contactForm">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_contactText1">
+                     <p style="font-size:13px;line-height:25px;"><span style="font-size:27px;line-height:49.5px;font-weight:bold;">عن شركتنا</span></p>
+                  </div>
+                  <div id="wb_contactText2">
+                     <p>شركة المعز لديها خبرة كافية في مجال النقل , بالاضافة الي انها تمتلك جميع الامكانيات والمعدات والأدوات والطاقة البشرية التي مكنتها من تقديم خدمة نقل عفش مميزة علي أعلي مستوي مستوي يليق عملائها.</p>
+                     <p>&nbsp;</p>
+                     <p>تتمثل تلك الامكانيات في أحدث وأفضل أجهزة النقل,&nbsp; وأفضل الادوات التي تستخدم في نقل العفش من عدد وأدوات يدوية لحمل الاثاث مثل أشرطة الكتف , وأحدث أدوات فك وتركيب الاثاث, كذلك أجهزة مخصصة لحمل العفش مثل الاوناش الهيدروليكية والاوناش الكهربية و متسلق السلالم الكهربائي , وكذلك أحدث سيارات نقل الاثاث المغلقة منها والمفتوح حتي تقدم الشركة في النهاية خددمة نقل أثاث لا يعلي عليها.</p>
+                     <p style="font-family:Arial;font-size:15px;line-height:16.5px;">&nbsp;</p>
+                  </div>
+                  <a id="contactButton" href="tel:01093800136">تواصل معنا</a>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="wb_contactText3">
+                     <p><span style="font-weight:bold;">تواصل معنا</span></p>
+                     <p style="font-family:Arial;font-size:13px;line-height:16px;">&nbsp;</p>
+                     <p style="font-family:Arial;font-size:16px;line-height:18px;font-weight:bold;">01093800136 - 01096163870 </p>
+                     <p style="font-family:Arial;font-size:16px;line-height:18px;font-weight:bold;">&nbsp;</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_footer">
+      <div id="footer-divider-top">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path class="divider-fill" d="M50,99.286L0,0L0,100L100,100L100,0L50,99.286Z" style="fill-opacity:0.5;"/>
+            <path class="divider-fill" d="M50,99.286L0,30L0,100L100,100L100,30L50,99.286Z"/>
+         </svg></div>
+      <div id="footer">
+         <div class="row">
+            <div class="col-1">
+            </div>
+            <div class="col-2">
+               <div id="wb_footerText">
+                  <p>جميع الحقوق محفوظة لشركة المعز لنقل العفش © 2021</p>
+               </div>
+            </div>
+            <div class="col-3">
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="Layer1">
+      <div id="wb_Image1">
+         <a href="tel:01093800136"><img src="images/free-phone-call-icon-535-thumb.png" id="Image1" alt="" width="96" height="96"></a></div>
+   </div>
+</body>
+</html>
